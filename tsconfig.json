@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "dist",
+    "baseUrl": "./src",
+    "paths": {
+      "@public/*": [
+        "public/*"
+      ]
+    },
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "target": "ES2020"
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/public/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
