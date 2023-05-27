@@ -16,8 +16,16 @@
     "next-patch": "npm --no-git-tag-version version patch",
     "next-minor": "npm --no-git-tag-version version minor",
     "next-major": "npm --no-git-tag-version version major",
-    "build:win": "electron-builder build --win",
-    "build:mac": "electron-builder build --mac"
+    "prebuild": "npm version minor",
+    "build": "electron-builder",
+    "postbuild": "rm -rf .build"
+  },  
+  "build": {
+    "productName": "VidUI",
+    "appId": "vid-ui-electron",
+    "linux": {
+      "target": "deb"
+    }
   },
   "repository": {
     "type": "git",
