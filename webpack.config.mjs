@@ -50,6 +50,12 @@ const commonConfig = {
           name: '[path][name].[ext]',
         },
       },
+      {
+        test: /\.m?js/,
+        resolve: {
+          fullySpecified: false
+        } 
+      }     
     ],
   },
 };
@@ -97,7 +103,7 @@ const rendererConfig = merge(commonConfig, {
   output: { filename: 'renderer.bundle.js' },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/public/index.html'),
+      template: path.resolve(__dirname, './public/index.html'),
     }),
   ],
 });
